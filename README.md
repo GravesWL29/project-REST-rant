@@ -24,3 +24,14 @@ Node MOdules: method-override, dotenv, express-react-views
 |  POST  |     /places/:id/rant     | Create a rant (comment) about a particular place |
 | DELETE | /places/:id/rant/:rantId | Delete a rant (comment) about a particular place |
 |   GET  |             *            |  404 page (matches any route not defined above)  |
+
+### Places
+
+|   Field  |    Type   |
+|:--------:|:---------:|
+| _id      | Object ID |
+| name     | String    |
+| city     | String    |
+| state    | String    |
+| cuisines | String    |
+| pic      | String    |

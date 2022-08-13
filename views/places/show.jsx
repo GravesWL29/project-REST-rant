@@ -8,13 +8,13 @@ function show(data) {
     </h3>
   )
   if (data.place.comments.length) {
-    comments = data.place.comments.map (c => {
+    comments = data.place.comments.map(c => {
       return (
         <div className="border">
-          <h2 className="rant">{c.rant ? 'Rant!' : 'Rave! '}</h2>
+          <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
           <h4>{c.content}</h4>
           <h3>
-            <strong>- {c.author}</strong>
+            <stong>- {c.author}</stong>
           </h3>
           <h4>Rating: {c.stars}</h4>
         </div>
@@ -61,10 +61,12 @@ function show(data) {
           </div>
         </div>
         <hr />
+        <div className="row">
             <h2>Comments</h2>
+            <a href={'/places/${data.place.id}/rant'}>
+              Add a comment
+            </a>
             {comments}
-            <div className="row">
-              
             </div>
       </main>
     </Def>
